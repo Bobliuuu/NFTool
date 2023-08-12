@@ -3,6 +3,7 @@ import axios from 'axios';
 import { debounce } from 'lodash';
 import SearchBar from '../components/UI/SearchBar';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
+import Button from '../components/UI/Button';
 
 type Entity = {
   name: string;
@@ -20,11 +21,18 @@ type Entity = {
     };
   };
   tokenId: string;
+  tokenContract: {
+    symbol: string;
+  };
 };
 
 type SearchResult = {
   collectionAddress: string;
   entity: Entity;
+  networkInfo: {
+    chain: string;
+    network: string;
+  };
 };
 
 export default function NFTSearch() {
@@ -63,6 +71,8 @@ export default function NFTSearch() {
     [search]
   );
 
+  console.log(searchResults);
+
   useEffect(() => {
     if (search.trim() && search.trim() !== lastSearch.current.trim()) {
       lastSearch.current = search;
@@ -89,7 +99,21 @@ export default function NFTSearch() {
         <div className='grid grid-cols-3 gap-6'>
           {searchResults.map((result, i) => (
             <div className='bg-white rounded-lg p-4' key={i}>
-              <p className=''>{result.entity.name}</p>
+              <img
+                src={result.entity.image.url}
+                alt={result.entity.name}
+                className='w-full h-24 object-cover mb-4'
+              />
+              <p className='font-bold mb-1'>{result.entity.name}</p>
+              <p className='text-sm  mb-1'>
+                {result.entity.tokenContract.symbol}
+              </p>
+              <p className='text-sm mb-6'>
+                {result.networkInfo.network} {result.networkInfo.chain}
+              </p>
+              <Button type='link' href='' hierarchy='primary' classes='w-full'>
+                Learn More
+              </Button>
             </div>
           ))}
         </div>
