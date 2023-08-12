@@ -44,10 +44,8 @@ export default async function handler(
   }
 
   try {
-    const {
-      search: { nodes: data },
-    } = await zdk.search(searchArgs as SearchQueryArgs);
-    return res.status(200).json(data);
+    const data = await zdk.search(searchArgs as SearchQueryArgs);
+    return res.status(200).json(data?.search?.nodes ? data?.search?.nodes : []);
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error fetching NFT Transactions" });
