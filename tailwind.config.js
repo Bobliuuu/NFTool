@@ -11,8 +11,9 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       blue1: '#4FC2E7',
-      blue2: '#181D48',
-      blue3: '#05011E',
+      blue2: '#3D4690',
+      blue3: '#181D48',
+      blue4: '#05011E',
     },
     extend: {
       width: {

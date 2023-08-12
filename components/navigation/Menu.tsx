@@ -57,7 +57,7 @@ export default function Menu() {
           <Link
             key={item.id}
             href={item.route}
-            className={`flex items-center gap-2 px-4 py-3.5 rounded-xl bg-blue2 ${
+            className={`flex items-center gap-2 px-4 py-3.5 rounded-xl bg-blue3 ${
               pathname === item.route ? 'bg-opacity-100' : 'bg-opacity-0'
             }`}
           >
