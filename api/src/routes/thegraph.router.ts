@@ -4,7 +4,7 @@ import * as controllers from '../controllers'
 
 async function theGraphRouter(fastify: FastifyInstance) {
   fastify.route({
-    method: 'GET',
+    method: 'POST',
     url: '/info',
     schema: theGraphSchema,
     handler: controllers.fetch,

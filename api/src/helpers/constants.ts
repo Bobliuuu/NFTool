@@ -6,12 +6,12 @@ export const STANDARD = {
 
 export const ERROR404 = {
   statusCode: 404,
-  message: 'NOT_FOUND',
+  message: 'NOT FOUND',
 }
 
 export const ERROR403 = {
   statusCode: 403,
-  message: 'FORBIDDEN_ACCESS',
+  message: 'FORBIDDEN ACCESS',
 }
 
 export const ERROR401 = {
@@ -21,15 +21,15 @@ export const ERROR401 = {
 
 export const ERROR500 = {
   statusCode: 500,
-  message: 'TRY_AGAIN',
+  message: 'TRY AGAIN',
 }
 
 export const ERROR409 = {
   statusCode: 409,
-  message: 'DUPLICATE_FOUND',
+  message: 'DUPLICATE FOUND',
 }
 
 export const ERROR400 = {
   statusCode: 400,
-  message: 'BAD_REQUEST',
+  message: 'BAD REQUEST',
 }
