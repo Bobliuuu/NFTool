@@ -22,14 +22,17 @@
     "@zoralabs/zdk": "^2.4.0",
     "axios": "^1.4.0",
     "formik": "^2.4.3",
+    "lodash": "^4.17.21",
     "next": "latest",
     "next-auth": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
+    "react-loader-spinner": "^5.3.4",
     "react-redux": "^8.1.2"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.197",
     "@types/node": "^18.16.2",
     "@types/react": "^18.2.0",
     "autoprefixer": "^10.4.14",
