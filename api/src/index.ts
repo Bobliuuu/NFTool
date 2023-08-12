@@ -1,8 +1,7 @@
 import { utils } from './helpers/utils';
 import fastify from 'fastify'
 import pino from 'pino';
-import userRouter from './routes/user.router'
-import postRouter from './routes/post.router';
+import theGraphRouter from './routes/thegraph.router'
 import loadConfig from './config'
 loadConfig()
 
@@ -16,13 +15,12 @@ const startServer = async () => {
     server.register(require('fastify-formbody'))
     server.register(require('fastify-cors'))
     server.register(require('fastify-helmet'))
-    server.register(userRouter, { prefix: '/api/user' })
-    server.register(postRouter, { prefix: '/api/post' })
+    server.register(theGraphRouter, { prefix: '/api/thegraph' })
     server.setErrorHandler((error, request, reply) => {
       server.log.error(error);
     })
     server.get('/', (request, reply) => {
-      reply.send({ name: 'fastify-typescript' })
+      reply.send({ name: 'nft-tool' })
     })
     server.get('/health-check', async (request, reply) => {
       try {

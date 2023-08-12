@@ -8,17 +8,11 @@
     "start": "node build/index.js | pino-pretty --colorize",
     "dev": "ts-node-dev ./src/index.ts | pino-pretty --colorize",
     "postinstall": "npx typesync",
-    "prisma": "dotenv -e .env prisma",
-    "db:gen": "npm run prisma generate",
-    "db:studio": "npm run prisma studio",
-    "db:migrate": "npm run prisma migrate dev",
-    "db:push": "npm run prisma db push",
     "lint": "./node_modules/.bin/eslint"
   },
   "keywords": [],
   "author": "justin13888",
   "dependencies": {
-    "@prisma/client": "^3.12.0",
     "@types/bcryptjs": "^2.4.2",
     "aws-sdk": "^2.1116.0",
     "bcryptjs": "^2.4.3",
@@ -43,7 +37,6 @@
     "pino": "^7.10.0"
   },
   "devDependencies": {
-    "@prisma/cli": "2.14.0",
     "@types/eslint": "8.4.1",
     "@types/eslint-config-prettier": "6.11.0",
     "@types/eslint-plugin-prettier": "3.1.0",
