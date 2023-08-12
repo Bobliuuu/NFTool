@@ -94,15 +94,16 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState(CHATS);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const { data } = await axios.get('/api/nft/balance', {
-  //       params: { chainName: "eth-mainnet", walletAddress: "0x0C3C8C5e113992E4C3Edf7C4980aE96e8880c0EE" },
-  //     });
-  //     setTestData(data);
-  //   };
-  //   fetchData();
-  // }, [])
+  // api route testing purposes
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get('/api/nft/search', {
+        params: { query: "ape", type: "COLLECTION", collectionsFilter: ["0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"] },
+      });
+      setTestData(data);
+    };
+    fetchData();
+  }, [])
 
   console.log(testData);
 

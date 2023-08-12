@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@zoralabs/zdk": "^2.4.0",
     "axios": "^1.4.0",
     "formik": "^2.4.3",
     "next": "latest",
