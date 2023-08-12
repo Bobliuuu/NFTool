@@ -11,11 +11,12 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       blue1: '#4FC2E7',
-      blue2: '#0D1134',
+      blue2: '#181D48',
       blue3: '#05011E',
     },
     extend: {
       width: {
+        0.25: '1px',
         4.5: '18px',
       },
     },

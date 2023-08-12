@@ -46,7 +46,7 @@ export default function Menu() {
   const { pathname } = router;
 
   return (
-    <div className='px-9 py-6 w-72'>
+    <div className='fixed inset-y-0 px-9 py-6 w-72'>
       <Link href='/' className='font-bold mb-12 text-2xl inline-block'>
         <span className='gradient-text bg-gradient-to-tr from-blue1 to-white'>
           NFTool
@@ -66,6 +66,7 @@ export default function Menu() {
           </Link>
         ))}
       </nav>
+      <div className='absolute right-0 inset-y-0 w-0.25 bg-blue2' />
     </div>
   );
 }
