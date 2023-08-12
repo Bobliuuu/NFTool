@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { zdk } from "../../../../constants/zora";
+import { zdk } from "../../../../config/zora";
 import { SearchQueryArgs } from "@zoralabs/zdk";
 
 type internalSearchArg = {
