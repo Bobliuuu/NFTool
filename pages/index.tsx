@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Send } from 'react-feather';
 import Layout from '../components/layout';
 import Header from '../components/header';
+import { Chat } from '../components/Chat';
 
 const CHATS = [
   {
@@ -91,12 +92,13 @@ const CHATS = [
   },
 ];
 
-export default function Chat() {
+export default function Home() {
   const [testData, setTestData] = useState();
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState(CHATS);
 
   // api route testing purposes
+  /*
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get('/api/nft/search', {
@@ -112,6 +114,7 @@ export default function Chat() {
   }, []);
 
   console.log(testData);
+  */
 
   return (
     <>
