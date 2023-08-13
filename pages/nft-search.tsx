@@ -4,6 +4,7 @@ import { debounce } from 'lodash';
 import SearchBar from '../components/UI/SearchBar';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 import Button from '../components/UI/Button';
+import Dropdown from '../components/UI/Dropdown';
 
 type Entity = {
   name: string;
@@ -37,6 +38,7 @@ type SearchResult = {
 
 export default function NFTSearch() {
   const [search, setSearch] = useState('');
+  const [searchType, setSearchType] = useState('Zora');
   const [loading, setLoading] = useState(false);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 
@@ -87,6 +89,15 @@ export default function NFTSearch() {
   return (
     <section className='px-16 pt-24'>
       <h1 className='text-white font-bold text-4xl mb-8'>NFT Search</h1>
+      <Dropdown
+        id='nft-search'
+        name='nft-search'
+        options={['Zora', 'Covalent', 'The Graph']}
+        value={searchType}
+        placeholder='Search type'
+        onChange={(e) => setSearchType(e.target.value)}
+        classes='mb-12 max-w-[480px] relative z-50'
+      />
       <SearchBar
         value={search}
         onChange={(e) => setSearch(e.target.value)}

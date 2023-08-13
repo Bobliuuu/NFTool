@@ -74,7 +74,7 @@ export default function Dropdown({
               } as React.ChangeEvent<HTMLSelectElement>);
               setIsOpen(false);
             }}
-            className={`transition-300 cursor-pointer rounded-sm px-3 py-3.5 hover:bg-white xl:px-4 xl:py-4 text-white`}
+            className={`transition-300 cursor-pointer rounded-sm px-3 py-3.5 xl:px-4 xl:py-4 text-white`}
             key={`option-${i}`}
           >
             {option}
