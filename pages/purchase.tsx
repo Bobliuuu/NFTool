@@ -27,7 +27,7 @@ export default function PurchaseTokens() {
   const handleCreateSession = async (values: any) => {
     setLoading(true);
     if (
-      !isSessionValid(values.sessionId) &&
+      isSessionValid(values.sessionId) &&
       !ethers.utils.isAddress(values.walletAddress)
     )
       return;
