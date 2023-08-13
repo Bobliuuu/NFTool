@@ -115,10 +115,8 @@ export default function Home() {
 
   console.log(testData);
   */
-
-  return (
-    <>
-      <div className='fixed bg-blue4 z-50 w-[calc(100%-289px)] right-0'>
+ /*
+ <div className='fixed bg-blue4 z-50 w-[calc(100%-289px)] right-0'>
         <Header />
       </div>
       <div className='h-[100dvh] relative overflow-y-scroll'>
@@ -165,6 +163,11 @@ export default function Home() {
           </form>
         </div>
       </div>
-    </>
+      */
+
+  return (
+    <Layout>
+      <Chat />
+    </Layout>
   );
 }
