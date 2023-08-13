@@ -20,8 +20,8 @@ def make_stable_diffusion_request(description):
     return json.loads(response.text)['url']
 
 CHAIN = option = st.selectbox('Chain to mint on',
-                            ('goerli', 'bsc-testnet', 'fuji', 'mumbai', 'arbitrum-goerli', 'optimism-goerli', 
-                            'avalanche', 'ethereum', 'polygon', 'optimism', 'fantom'))
+                            ('goerli', 'bsc-testnet', 'fuji', 'mumbai', 'arbitrum-goerli', 'optimism-goerli', 'fantom-testnet', 
+                            'ethereum', 'avalanche', 'polygon', 'arbitrum', 'optimism', 'fantom'))
 ADDRESS = st.text_input('Address: ')
 
 if st.button("Mint NFT"):
