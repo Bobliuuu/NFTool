@@ -22,12 +22,12 @@ Ready to deploy your smart contracts? Use our Contract Deployment tool to get st
 - Frontend: Next.js, React.js, Tailwind CSS, Redux
 - Backend: Worldcoin Auth, Next Auth, Zora ZDK, OpenAI API, Mode, Optimism, Base, Sepolia, GraphQL, Axelar, The Graph, Covalent, Safe, GraphQL
 
-
-
 Base templates used: 
 
 Vercel AI GPT   \
 Worldcoin Next Auth
+
+Worldcoin Auth deployed at /worldcoin, using Github Codespaces: https://refactored-cod-pwjv6q95qg5h7vj9.app.github.dev/
 
 Smart contracts deployed (using Remix or Thirdweb)
 
