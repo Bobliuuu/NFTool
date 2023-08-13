@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Send } from 'react-feather';
-import Layout from "../components/layout"
-import { Chat } from '../components/Chat'
+import Layout from '../components/layout';
+import Header from '../components/header';
+import { Chat } from '../components/Chat';
 
 const CHATS = [
   {
@@ -101,19 +102,27 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get('/api/nft/search', {
-        params: { query: "ape", type: "COLLECTION", collectionsFilter: ["0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"] },
+        params: {
+          query: 'ape',
+          type: 'COLLECTION',
+          collectionsFilter: ['0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D'],
+        },
       });
       setTestData(data);
     };
     fetchData();
-  }, [])
+  }, []);
 
   console.log(testData);
   */
 
-  /*
-  <div className='h-[100dvh] relative overflow-y-scroll'>
-        <div className='h-[100dvh] overflow-y-scroll pb-40'>
+  return (
+    <>
+      <div className='fixed bg-blue4 z-50 w-[calc(100%-289px)] right-0'>
+        <Header />
+      </div>
+      <div className='h-[100dvh] relative overflow-y-scroll'>
+        <div className='h-[100dvh] overflow-y-scroll pt-16 pb-40'>
           {messages.map((message) => (
             <div
               key={message.id}
@@ -155,11 +164,7 @@ export default function Home() {
             </div>
           </form>
         </div>
-      </div>*/
-
-  return (
-    <Layout>
-      <Chat />
-    </Layout>
+      </div>
+    </>
   );
 }
