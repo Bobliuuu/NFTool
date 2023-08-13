@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Send } from 'react-feather';
 import Layout from "../components/layout"
+import { Chat } from '../components/Chat'
 
 const CHATS = [
   {
@@ -90,12 +91,13 @@ const CHATS = [
   },
 ];
 
-export default function Chat() {
+export default function Home() {
   const [testData, setTestData] = useState();
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState(CHATS);
 
   // api route testing purposes
+  /*
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get('/api/nft/search', {
@@ -107,10 +109,10 @@ export default function Chat() {
   }, [])
 
   console.log(testData);
+  */
 
-  return (
-    <Layout>
-      <div className='h-[100dvh] relative overflow-y-scroll'>
+  /*
+  <div className='h-[100dvh] relative overflow-y-scroll'>
         <div className='h-[100dvh] overflow-y-scroll pb-40'>
           {messages.map((message) => (
             <div
@@ -153,7 +155,11 @@ export default function Chat() {
             </div>
           </form>
         </div>
-      </div>
+      </div>*/
+
+  return (
+    <Layout>
+      <Chat />
     </Layout>
   );
 }
