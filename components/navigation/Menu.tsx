@@ -6,6 +6,7 @@ import {
   Code,
   Search,
   Upload,
+  DollarSign
 } from 'react-feather';
 
 const MENU_ITEMS = [
@@ -38,6 +39,12 @@ const MENU_ITEMS = [
     label: 'Deploy Contract',
     route: '/deploy-contract',
     icon: <Upload className='w-4.5 text-white' />,
+  },
+  {
+    id: 'purchase-crypto',
+    label: 'Purchase Tokens',
+    route: '/purchase',
+    icon: <DollarSign className='w-4.5 text-white' />,
   },
 ];
 
