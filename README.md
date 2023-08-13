@@ -20,7 +20,7 @@ Ready to deploy your smart contracts? Use our Contract Deployment tool to get st
 
 ## Technologies Used 🧑🏻‍💻
 - Frontend: Next.js, React.js, Tailwind CSS, Redux
-- Backend: Worldcoin Auth, Next Auth, Zora ZDK, OpenAI API, Mode, Optimism, Base, Sepolia, GraphQL, Axelar, The Graph, Covalent, Safe
+- Backend: Worldcoin Auth, Next Auth, Zora ZDK, OpenAI API, Mode, Optimism, Base, Sepolia, GraphQL, Axelar, The Graph, Covalent, Safe, GraphQL
 
 
 
