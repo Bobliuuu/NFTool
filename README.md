@@ -26,8 +26,10 @@ Ready to deploy your smart contracts? Use our Contract Deployment tool to get st
 
 Base templates used: 
 
-Vercel AI GPT
+Vercel AI GPT   \
 Worldcoin Next Auth
+
+Smart contracts deployed (using Remix or Thirdweb)
 
 Sepolia: 
 
@@ -39,7 +41,9 @@ Mode:
 
 Smart Contracts Deployed: 
 
-https://sepolia.explorer.mode.network/address/0xA4F912Eb1aF9BB29343b3A4be86130Ddfe095c1f
+Storage contract for contract address: https://sepolia.explorer.mode.network/address/0xA4F912Eb1aF9BB29343b3A4be86130Ddfe095c1f
+
+Mint NFT on Mode: https://sepolia.explorer.mode.network/address/0x505c374B3cA8E7D521D0DB46006174fDDB5e0336
 
 View wallet balances: 
 
